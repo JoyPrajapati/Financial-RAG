@@ -1,0 +1,24 @@
+# ===== YOUR LANDMINES (BLOCKED FOREVER) =====
+models/paraphrase-MiniLM-L12-v2/
+vector_store/chroma_index/
+vector_store/test_chroma/
+data/uploads/
+mlruns/
+venv/
+.venv/
+
+# ===== PYTHON CACHE =====
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ===== ENV & SECRETS =====
+.env
+*.pem
+
+# ===== IDE & OS =====
+.vscode/
+.idea/
+.DS_Store
+*.log

@@ -1,0 +1,35 @@
+# Core ML
+torch==2.3.1
+sentence-transformers==3.0.1
+
+# LangChain
+langchain==0.3.25
+langchain-community==0.3.24
+langchain-core==0.3.60
+langchain-text-splitters==0.3.8
+
+# Vector DB
+chromadb==0.5.3
+
+# API
+fastapi==0.115.0
+uvicorn==0.32.0
+python-dotenv==1.0.1
+pydantic==2.8.2
+python-multipart==0.0.9
+
+# File parsers
+pymupdf==1.24.9
+python-docx==1.1.0
+openpyxl==3.1.2
+
+# LLM
+openai==1.40.0
+
+# Tracking
+mlflow==2.15.1
+
+# UI
+streamlit==1.38.0
+requests==2.32.3
+pandas==2.2.2
