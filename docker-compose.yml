@@ -34,7 +34,7 @@ services:
       - rag-api
     restart: unless-stopped
 
- mlflow:
+  mlflow:
     image: ghcr.io/mlflow/mlflow:latest
     container_name: financial-rag-mlflow
     ports:
