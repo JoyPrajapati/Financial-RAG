@@ -7,13 +7,13 @@ app = FastAPI(
     title="Financial RAG API v2",
     description=(
         "RAG system for SEC 10-K PDF filings — "
-        "ChromaDB + paraphrase-MiniLM-L12-v2 + DeepSeek-R1"
+        "ChromaDB + paraphrase-MiniLM-L12-v2 + nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
     ),
     version="2.0.0"
 )
 
-app.include_router(ingest_router, prefix="/api/v1", tags=["Ingestion"])
-app.include_router(query_router, prefix="/api/v1", tags=["Query"])
+app.include_router(ingest_router, tags=["Ingestion"])
+app.include_router(query_router, tags=["Query"])
 
 
 @app.get("/health")
@@ -23,7 +23,7 @@ def health_check():
         "service": "financial-rag-v2",
         "vector_db": "chromadb",
         "embedding_model": "paraphrase-MiniLM-L12-v2",
-        "llm": "deepseek-ai/DeepSeek-R1"
+        "llm": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
     }
     
 @app.get("/api/v1/indexed-files")
