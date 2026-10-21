@@ -4,7 +4,7 @@ import json
 import time
 
 # ── Config ────────────────────────────────────────────────
-API_BASE = "http://127.0.0.1:8000/api/v1"
+API_BASE = "http://127.0.0.1:8000"
 
 st.set_page_config(
     page_title="Financial RAG — 10-K Analyzer",
@@ -241,7 +241,7 @@ st.markdown(
 )
 st.markdown(
     '<p class="sub-header">'
-    'RAG system powered by DeepSeek-R1 · ChromaDB · '
+    'RAG system powered by Nvidia-nemotron · ChromaDB · '
     'paraphrase-MiniLM-L12-v2'
     '</p>',
     unsafe_allow_html=True
@@ -435,7 +435,7 @@ with tab2:
         with col2:
             st.metric("Sources Used", r["num_sources"])
         with col3:
-            st.metric("Model", "DeepSeek-R1")
+            st.metric("Model", "Nvidia-Nemo Omni 30B")
         with col4:
             st.metric(
                 "Retrieval",
