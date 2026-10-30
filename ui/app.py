@@ -108,7 +108,7 @@ def check_api_health() -> bool:
 def ingest_file(file) -> dict:
     file_bytes = file.getvalue()
     files = {"file": (file.name, file_bytes, "application/octet-stream")}
-    r = requests.post(f"{API_BASE}/ingest", files=files, timeout=300)
+    r = requests.post(f"{API_BASE}/ingest", files=files, timeout=900)
     r.raise_for_status()
     return r.json()
 
